@@ -192,12 +192,13 @@ h2 {
 }
 
 .formulario input:not([type="submit"]),
-.formulario textarea {
+.formulario textarea,
+.formulario select{
     width: 100%;
     padding: 1rem;
     background-color: #FFF;
     border: .1rem solid #808080;
-    border-radius: 1rem;
+    border-radius: .8rem;
     margin-bottom: 2rem;
 }
 
@@ -213,6 +214,7 @@ h2 {
 }
 
 .boton {
+    display: inline-block;
     background-color: #003d6a;
     color: white;
     text-decoration: none;

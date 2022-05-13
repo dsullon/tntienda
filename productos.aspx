@@ -4,6 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <h2>Listado de Productos</h2>
+
+    <a href="producto_crear.aspx" class="boton">
+        <i class="fa-solid fa-file-circle-plus"></i>
+        Agregar Producto
+    </a>
+
     <asp:GridView ID="gvDatos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <EditRowStyle BackColor="#999999" />
@@ -36,7 +42,7 @@
                             <p><%#Eval("Precio") %></p>
                         </div>
                     </div>
-                    <a href="producto_editar.aspx">Editar</a>
+                    <a href="producto_editar.aspx?id=<%#Eval("IdProducto") %>">Editar</a>
                 </div>
             </ItemTemplate>
         </asp:Repeater>

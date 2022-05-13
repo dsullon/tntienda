@@ -80,6 +80,7 @@
     <Content Include="Global.asax" />
     <Content Include="login.aspx" />
     <Content Include="productos.aspx" />
+    <Content Include="producto_crear.aspx" />
     <Content Include="producto_editar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -114,6 +115,13 @@
     </Compile>
     <Compile Include="productos.aspx.designer.cs">
       <DependentUpon>productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="producto_crear.aspx.cs">
+      <DependentUpon>producto_crear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="producto_crear.aspx.designer.cs">
+      <DependentUpon>producto_crear.aspx</DependentUpon>
     </Compile>
     <Compile Include="producto_editar.aspx.cs">
       <DependentUpon>producto_editar.aspx</DependentUpon>

@@ -31,5 +31,6 @@
         <label for="txtObservacion">Observación:</label>
         <asp:TextBox ID="txtObservacion" TextMode="MultiLine" runat="server"></asp:TextBox>
     </fieldset>
-    <asp:Button CssClass="boton" ID="btnRegistrar" runat="server" Text="Registrar" />
+    <asp:Button CssClass="boton" ID="btnRegistrar" 
+        runat="server" Text="Registrar" OnClick="registrar" />
 </asp:Content>

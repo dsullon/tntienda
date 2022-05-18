@@ -23,7 +23,7 @@ namespace Tienda
             if (!Page.IsPostBack)
             {
                 cargarDatosProducto();
-            }            
+            }
         }
 
         void cargarDatosProducto()
@@ -55,13 +55,13 @@ namespace Tienda
             var precio = txtPrecio.Text;
             var observacion = txtObservacion.Text;
 
-            using(var conexion = new SqlConnection(strConexion))
+            using (var conexion = new SqlConnection(strConexion))
             {
                 conexion.Open();
                 var sql = "Update Producto Set Nombre=@nombre, Marca=@marca, " +
                     "Precio=@precio, Observacion=@observacion " +
                     "Where IdProducto=@id";
-                using(var command = new SqlCommand(sql, conexion))
+                using (var command = new SqlCommand(sql, conexion))
                 {
                     command.Parameters.AddWithValue("@nombre", nombre);
                     command.Parameters.AddWithValue("@marca", marca);
@@ -71,7 +71,10 @@ namespace Tienda
                     int filas = command.ExecuteNonQuery();
                     if (filas > 0)
                     {
-                        Response.Redirect("productos.aspx");
+                        var script = "alert('Datos actualizados'); ";
+                        script += "window.location='productos.aspx';";
+                        ScriptManager.RegisterStartupScript(this, this.GetType(),
+                            "mensaje", script, true);
                     }
                 }
             }

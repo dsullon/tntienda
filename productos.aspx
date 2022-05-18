@@ -29,6 +29,7 @@
         <asp:Repeater ID="rpDatos" runat="server">
             <ItemTemplate>
                 <div class="producto">
+                    <img class="producto-foto" src="<%#Eval("Foto") %>" alt="<%#Eval("Nombre") %>"/>
                     <div class="producto-detalle">
                         <h3><%#Eval("Nombre") %></h3>
                         <p><%#Eval("Marca") %></p>

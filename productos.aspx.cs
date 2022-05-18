@@ -22,7 +22,7 @@ namespace Tienda
         {            
             using(var conexion = new SqlConnection(strConexion))
             {
-                string sql = "SELECT IdProducto, A.Nombre, Marca, Precio, B.Nombre AS Categoria " +
+                string sql = "SELECT IdProducto, A.Nombre, Marca, Precio, B.Nombre AS Categoria, Foto " +
                     "FROM Producto A Inner Join Categoria B ON A.IdCategoria = B.IdCategoria";
 
                 using(var command = new SqlCommand(sql, conexion))

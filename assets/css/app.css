@@ -255,6 +255,8 @@ h2 {
     border: .1rem solid #359ad5;
     padding: 2rem;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
     .producto a {
@@ -275,4 +277,11 @@ h2 {
 
 .producto-info {
     display: flex;
+}
+
+.producto-foto{
+    width: 25rem;
+    height: 25rem;
+    background-color: lightgray;
+    border-radius: .5rem;
 }
